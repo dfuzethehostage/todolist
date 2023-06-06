@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding-top: 3rem;
+        display: grid;
+        justify-content: center;
+      }
+      button {
+        transition: background ease 0.1s;
+      }
+      #content {
+        width: 50vw;
+      }
+
+      /* Project Creation */
+      #new-project {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+      }
+      #new-project label {
+        font-size: 1.7rem;
+      }
+      #new-project input {
+        padding: 0.4rem;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+        border: 1px solid rgb(123, 127, 133);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      }
+      #new-project button {
+        color: aliceblue;
+        height: 100%;
+        padding: 0.4rem;
+        background: #791919;
+        font-size: 1.5rem;
+        border-radius: 0.5rem;
+        border: none;
+      }
+      #new-project button:hover {
+        background: #d53131;
+      }
+
+      /* Project container */
+      #projects {
+        display: grid;
+        gap: 1rem;
+      }
+
+      /* Project */
+      .project {
+        padding: 1.5rem;
+        background: #af7272;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 1rem;
+        display: grid;
+      }
+
+      .project-name {
+        margin-block: 0rem 1rem;
+        font-size: 2rem;
+      }
+
+      .button-container {
+        display: flex;
+      }
+
+      .project > .button-container > button {
+        color: aliceblue;
+        font-size: large;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: none;
+        background: rgb(38, 38, 60);
+      }
+      .project > .button-container > button:hover {
+        background: #42447e;
+      }
+      .project .new-todo {
+        margin-inline: auto;
+      }
+
+      /* Form */
+      .new-todo-form {
+        margin-top: 2rem;
+        display: grid;
+        gap: 1.8rem;
+      }
+      .new-todo-form div {
+        display: flex;
+        justify-content: space-between;
+      }
+      .new-todo-form label {
+        font-size: 1.5rem;
+      }
+      .new-todo-form input {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        width: 70%;
+      }
+      .add-todo {
+        color: aliceblue;
+        background: #152421;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+      }
+      .add-todo:hover {
+        background: #136c47;
+      }
+      /* Todo */
+      .todo-container {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .todo-container > div {
+        border-radius: 0.5rem;
+        padding: 1rem;
+        background: #ffffff;
+      }
+      .todo-container > div > div {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        border-bottom: 1px solid black;
+      }
+      .todo-container > div p {
+        margin-block: 0.3rem;
+      }
+      .title > p {
+        font-size: 1.6rem;
+      }
+      .todo-container > div > div > :first-child {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-right: 0.3rem;
+      }
+      .todo-container > div button {
+        color: aliceblue;
+        padding: 0.4rem;
+        margin-top: 0.5rem;
+        border: none;
+        background: #9c0c0c;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+      }
+      .todo-container > div button:hover {
+        background: #612b2b;
+      }
+
+      /*  */
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <div id="new-project" action="">
+        <label for="project-name-input">Project name:</label>
+        <input id="project-name" type="text" />
+        <button id="add-project">Add new project</button>
+      </div>
+
+      <div id="projects"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
